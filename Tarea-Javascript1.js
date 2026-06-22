@@ -30,7 +30,7 @@ if (promedio>=6) {
 
 let numero1 = parseFloat(prompt("Ingrese el primer numero:"));
 let numero2 = parseFloat(prompt("Ingrese el segundo numero:"));
-let operacion= prompt("ingrese el tipo de operacion a realizar: suma, resta, division, multiplicacion");
+let operacion= prompt("ingrese el tipo de operacion a realizar: suma, resta, division, multiplicacion") .toLowerCase().trim();
 
 
 if (operacion==="suma") { 
