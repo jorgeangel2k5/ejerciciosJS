@@ -41,10 +41,10 @@ if (miNumero === numeroSecreto) {
 
 alert("🧐 Bienvenid@, te voy a sugerir la bebida que acompañará tu menú.");
 
-// 1. Pedimos el menú al usuario
+
 let opcion = prompt("🧐 ¿Qué menú deseas hoy?\nCarne | Pescado | Verdura");
 
-// 2. Evaluamos la opción con Switch (usamos .toLowerCase() para que acepte mayúsculas o minúsculas)
+
 switch (opcion.toLowerCase().trim()) {
     case "carne":
         alert("🍷 Te sugerimos acompañar tu carne con Vino Tinto.");
@@ -59,7 +59,7 @@ switch (opcion.toLowerCase().trim()) {
         break;
 
     default:
-        // El plan B por si escriben cualquier otra cosa
+    
         alert("❌ Elija carne, pescado o verdura.");
         break;
         }
