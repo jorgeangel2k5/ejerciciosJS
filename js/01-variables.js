@@ -73,19 +73,31 @@ Error: Representaciones de errores y excepciones.
 /*Ejercicios
 
 1 - Siguiendo buenas prácticas que palabra/s reservada/s de javascript debemos usar para declarar variables. 
-
+let y const
 2 - Declarar e inicializar una variable de tipo String, una de tipo booleana y dos de tipo number.
+
+Variable de tipo String
+const nombreCurso = "Programación en JavaScript";
+
+ Variable de tipo Booleana
+let tieneDescuento = true;
+
+Dos variables de tipo Number
+const precioBase = 1500;
+let cantidadCuotas = 3;
+
 
 3 - ¿Con qué  convención de nomenclatura está escrito el nombre de la siguente variable (pascal case, camel case o snake case)?
 
-let cantidadDeAlumnos=45 camelCase
+La variable let cantidadDeAlumnos = 45 está escrita en camelCase
+
 
 4 - Qué tipo de datos tienen almacenados las siguientes variables?
 
- - const MASCOTAS=['Boby','Chatran','Scooby']
- - let comisionActiva
- - let estaInactiva= false
+ - const MASCOTAS=['Boby','Chatran','Scooby']  Tipo de dato bbjeto array
+ - let comisionActiva  Tipo de dato indefinido
+ - let estaInactiva= false  Tipo de dato booleano
 
 5 - ¿Cómo puedo saber que tipo de datos tiene una variable desde la consola?. 
-
+utilizando typeof seguido del nombre de la variable.
 */

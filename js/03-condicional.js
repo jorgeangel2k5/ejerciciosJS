@@ -31,7 +31,7 @@ if(condition){
 }
 
 */
-
+/*
 let userName = "BadBunny";
 let acceso = false;
 let rol = "user";
@@ -91,9 +91,21 @@ Un comerciante hace descuentos a sus clientes de la siguiente forma:
 - Si la compra está por encima de 300 hasta 500 dolares le descuenta un 10%
 - Si la compra supera los 500 dolares le descuenta un 15%
 */
-let compra = Number(prompt("Ingrese el valor de la compra"));
+/*let compra = Number(prompt("Ingrese el valor de la compra"));
 
 console.log(parseInt(nota));
 console.log(parseFloat(nota));
 console.log(Number(nota));
 //Cuál usar? Depende del tipo de número que esperemos recibir, si esperamos un número entero, parseInt() es la mejor opción, si esperamos un número decimal, parseFloat() es la mejor opción, si no sabemos qué tipo de número vamos a recibir, Number() es la mejor opción.
+*/
+let compra = Number(prompt("Ingrese el valor de la compra"));
+
+if (compra < 100) {
+    console.log("No hay descuento. Total a pagar: " + compra);
+} else if (compra >= 100 && compra <= 300) {
+    console.log("Descuento del 5%. Total a pagar: " + (compra - (compra * 0.05)));
+} else if (compra > 300 && compra <= 500) {
+    console.log("Descuento del 10%. Total a pagar: " + (compra - (compra * 0.10)));
+} else {
+    console.log("Descuento del 15%. Total a pagar: " + (compra - (compra * 0.15)));
+}
