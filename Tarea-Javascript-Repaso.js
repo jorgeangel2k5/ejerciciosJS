@@ -131,16 +131,71 @@
 // - **Reto:** Cuenta cuántas tareas logró realizar antes de apagarse.
 
 
-let bateria = 100;
-let tareasRealizadas = 0;
+// let bateria = 100;
+// let tareasRealizadas = 0;
+
+// while (bateria>0) {
+// let cantidadAletoria= Math.floor(Math.random () *(20-5+1)) + 5;
+// bateria = bateria - cantidadAletoria
+
+// tareasRealizadas++;
+
+// }
+// console.log(`🤖Logré realizar ${tareasRealizadas} tareas`);
+
+// #### 8. La Calculadora de Conversión (function)
+
+// Crea una función llamada `convertirAMinutos` que reciba un número de horas
+//  y retorne la cantidad equivalente en minutos.
+
+// - **Reto:** Invoca la función con diferentes valores y muestra el resultado en consola.
+// - **Pista:** `minutos = horas * 60`.
+
+// function convertirAMinutos(horas) {
+//   let minutos= horas * 60;
+//   return minutos
+// }
+// console.log("2 horas son: " + convertirAMinutos(2) + " minutos");
+// console.log("5 horas son: " + convertirAMinutos(5) + " minutos");  
+
+// #### 9. El Comparador de Edad (function)
+
+// Crea una función llamada `puedeVotar` que reciba una edad (número) 
+// y retorne `true` si la persona tiene 18 años o más, y `false` en caso contrario.
+
+// function puedeVotar(edad) {
+  
+
+// if (isNaN (edad)) {
+//   return "Por favor ingrese su edad";
+// }
+// if (edad>=18) {
+//   return true;
+// } else {
+//   return false;
+// }
+// }
+// console.log(puedeVotar(20));
+// console.log(puedeVotar(15));
 
 
+// #### 10. El Calculador de Descuentos (function)
 
-while (bateria>0) {
-let cantidadAletoria= Math.floor(Math.random () *(20-5+1)) + 5
-bateria = bateria - cantidadAletoria
+// Crea una función llamada `calcularPrecioFinal` que reciba 
+// dos parámetros: `precioOriginal` y `porcentajeDescuento`. La función debe retornar
+//  el precio final después de aplicar el descuento.
 
-tareasRealizadas++
+function calcularPrecioFinal(precioOriginal, porcentajeDescuento) {
+
+  if (isNaN (precioOriginal) || isNaN(porcentajeDescuento)) {
+    return "por faavor ingrese un precio valido"
+  }
+
+  let descuento = (precioOriginal * porcentajeDescuento) / 100;
+  let precioFinal = precioOriginal - descuento;
+  return precioFinal;
 
 }
-console.log(`🤖Logro realizar ${tareasRealizadas} tareas`)
+
+console.log("Precio final: $" + calcularPrecioFinal(1000, 15));
+console.log("Precio final: $" + calcularPrecioFinal(500, 50));   
