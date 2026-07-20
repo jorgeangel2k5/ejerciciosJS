@@ -68,7 +68,7 @@ function validarCredenciales(user, pass) {
   } else {
     alert("❌Usuario o contraseña incorrectos");
   }
-}
+}img
 
 //Función flecha
 const calcularDescuentoArrow = (valor, descuento = 5) =>
