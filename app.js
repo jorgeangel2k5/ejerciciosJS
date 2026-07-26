@@ -90,8 +90,8 @@ btnGuardar.addEventListener("click", function(){
 // Usa template strings (`) para inyectar las propiedades del objeto recibido dentro 
 //    del innerHTML de la tarjeta.
 
-const btonCargar = document.querySelector("#btnCargar")
-const tarjeta = document.querySelector("#tarjeta")
+const btonCargar = document.querySelector("#btnCargar");
+const tarjeta = document.querySelector("#tarjeta");
 btonCargar.addEventListener("click", async function () {
 const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
 const data = await response.json();
@@ -100,5 +100,28 @@ const data = await response.json();
   <h3>${data.email}</h3>`;
 });
 
+// Ejercicio 5: "Galería de Personajes con Indicador de Carga" (Asincronismo completo)
+// Consigna: Crea una aplicación que al presionar un botón "Buscar Personaje"
+//  muestre temporalmente el texto "Cargando..." en pantalla. Luego,.
+//  mediante un fetch a la API de Rick and Morty ([https://rickandmortyapi.com/api/character/5](https://rickandmortyapi.com/api/character/5)), 
+// obtén un personaje, borra el texto de carga y muestra su nombre y su imagen en el DOM.
 
+// Tips para resolverlo:
+// Antes de hacer el await fetch(...), actualiza el contenedor #resultado con un texto 
+// o un Spinner de Bootstrap para simular la espera.
+// Cuando obtengas los datos de la API, reemplaza el contenido del contenedor
+//  utilizando las propiedades data.name y data.image del objeto que te devuelve la API.
 
+const  btnPersonaje = document.querySelector("#btnPersonaje");
+const resultado = document.querySelector("#resultado");
+
+btnPersonaje.addEventListener("click", async function(){
+resultado.innerHTML = "<h2>Espere Por Favor!!!</h2>";
+
+const respuesta = await fetch("https://rickandmortyapi.com/api/character/5");
+const data = await respuesta.json();
+resultado.innerHTML=
+ `<h2>${data.name}</h2>
+ <img src="${data.image}">`;
+
+});
