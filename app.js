@@ -73,3 +73,32 @@ btnGuardar.addEventListener("click", function(){
  }, 3000);
 
 });
+
+
+// Ejercicio 4: "Buscador de Usuario" (async/await y fetch)
+// Consigna: Crea un botón que diga "Cargar Usuario" y una tarjeta vacía en el HTML.
+//  Al hacer clic en el botón, utiliza async/await y fetch para consumir la API 
+//  pública de JSONPlaceholder ([https://jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)).
+// Una vez que lleguen los datos, pinta el nombre y el correo electrónico dentro de la tarjeta en el DOM.
+// Tips para resolverlo:
+
+// No olvides que la función asociada al evento del botón debe declararse como async.
+
+// Recuerda el doble paso del fetch: primero obtener la respuesta y 
+// luego transformarla a JSON con await respuesta.json().
+
+// Usa template strings (`) para inyectar las propiedades del objeto recibido dentro 
+//    del innerHTML de la tarjeta.
+
+const btonCargar = document.querySelector("#btnCargar")
+const tarjeta = document.querySelector("#tarjeta")
+btonCargar.addEventListener("click", async function () {
+const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+const data = await response.json();
+ tarjeta.innerHTML=
+ `<h2>${data.name}</h2>
+  <h3>${data.email}</h3>`;
+});
+
+
+
